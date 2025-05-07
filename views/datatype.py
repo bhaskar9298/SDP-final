@@ -340,6 +340,10 @@ def plot_missing_values_percentage(dataframe):
     # Filter out columns with 0% missing values
     missing_percentages = missing_percentages[missing_percentages > 0]
 
+    if missing_percentages.empty:
+        st.success("No missing values found in the dataset!")
+        return
+    
     # Data for Pie Chart
     labels = missing_percentages.index
     values = missing_percentages.values
@@ -349,6 +353,7 @@ def plot_missing_values_percentage(dataframe):
         labels=labels, 
         values=values, 
         hole=0.5,
+        textinfo='label+percent',
         marker=dict(colors=['orange', 'blue', 'red', 'green', 'purple'])  # Customize colors
     )])
 
@@ -361,9 +366,9 @@ def plot_missing_values_percentage(dataframe):
         width=600,
         height=400
     )
-
-    # Display the chart in Streamlit
     st.plotly_chart(fig)
+    # Display the chart in Streamlit
+    #st.plotly_chart(fig)
 
 def plot_missing_values_count_barchart(dataframe):
 
@@ -388,22 +393,26 @@ def plot_missing_values_count_barchart(dataframe):
 
         # Update Layout
         fig.update_layout(
-            title='Count of Missing Values in Each Column',
-            xaxis_title='Columns',
-            yaxis_title='Count of Missing Values',
-            xaxis=dict(
-                tickfont=dict(size=14),
-                titlefont=dict(size=16)
+        title='Count of Missing Values in Each Column',
+        xaxis=dict(
+            title=dict(
+                text='Columns', 
+                font=dict(size=16)  # Correct way to set title font
             ),
-            yaxis=dict(
-                tickfont=dict(size=14),
-                titlefont=dict(size=16)
+            tickfont=dict(size=14)
+        ),
+        yaxis=dict(
+            title=dict(
+                text='Count of Missing Values',
+                font=dict(size=16)  # Correct way to set title font
             ),
-            width=500,
-            height=600
-        )
-
-        # Display the chart in Streamlit
+            tickfont=dict(size=14)
+        ),
+        width=500,
+        height=600
+    )
+    
+    # Display the chart in Streamlit
         st.plotly_chart(fig)
     else:
         st.write("No missing values in the dataset!")

@@ -38,7 +38,7 @@ def add_logo(logo_path):
     st.markdown(logo_html, unsafe_allow_html=True)
 
 # Add the logo
-add_logo("assets/plotmaster-high-resolution-logo-transparent.png")
+add_logo("assets/AI-POWERED-EDA-TOOL.png")
 
 # Define your pages
 about_page = st.Page(
@@ -77,11 +77,12 @@ eda_5_page = st.Page(
     title="ChatBot",
     #icon="material/question_answer:"
 )
-ai_eda_page = st.Page(
-    page="views/ai_eda.py",
-    title="AI Report",
-    icon=":material/insights:"
-)
+
+# ai_eda_page = st.Page(
+#     page="views/ai_eda.py",
+#     title="AI Report",
+#     icon=":material/insights:"
+# )
 # REMOVED: Duplicate Data QA page that was causing the conflict
 # Now we only have one reference to the data_qa.py file
 
@@ -89,7 +90,7 @@ ai_eda_page = st.Page(
 pg = st.navigation(
     {
         "Info":[about_page],
-        "EDA": [eda_1_page, eda_2_page, eda_3_page, eda_4_page, eda_5_page,ai_eda_page],
+        "EDA": [eda_1_page, eda_2_page, eda_3_page, eda_4_page, eda_5_page],
     }
 )
 
