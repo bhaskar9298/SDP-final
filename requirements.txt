@@ -2,16 +2,14 @@ streamlit
 pandas
 numpy
 plotly
+matplotlib
+seaborn
 streamlit-option-menu
 
-streamlit
-pandas
 pymupdf
 openai>=1.0.0
 python-dotenv
-plotly
-matplotlib
-seaborn
+
 
 langchain-core
 langchain-community
@@ -26,12 +24,6 @@ pillow
 typing-extensions
 tqdm
 
-pandas
-numpy
-matplotlib
+
 seaborn
-chainlit
-Pillow
-google-generativeai
-python-dotenv
 nest-asyncio
