@@ -69,13 +69,13 @@ eda_3_page = st.Page(
 eda_4_page = st.Page(
     page="views/matrix.py",
     title="Correlation Matrix",
-    #icon=":material/grid_view:"
+    icon=":material/grid_view:"
 )
 
 eda_5_page = st.Page(
     page="views/data_qa.py",
     title="ChatBot",
-    #icon="material/question_answer:"
+    icon=":material/insights:"
 )
 
 # ai_eda_page = st.Page(

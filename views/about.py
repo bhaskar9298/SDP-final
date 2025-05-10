@@ -58,6 +58,7 @@ def show_description():
         <li><b>Dynamic Visualizations:</b> Create histograms, scatter plots, box plots, and heatmaps with customizable colors.</li>
         <li><b>Instant Results:</b> View results in real-time as you interact with the app.</li>
         <li><b>User-Friendly Interface:</b> Designed for both beginners and advanced users in data analysis.</li>
+        <li><b>Question Answering  ChatBot: Engage with the RAG-enabled Q&A chatbot for information.</li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
