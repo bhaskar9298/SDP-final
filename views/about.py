@@ -37,7 +37,8 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 def show_description():
-    st.markdown('<div class="title">About This App</div>', unsafe_allow_html=True)
+    st.markdown('<div class="title">AI-POWERED EDA TOOL</div>', unsafe_allow_html=True)
+    #st.markdown('<div class="title">About This App</div>', unsafe_allow_html=True)
     
     # Description of the app
     st.markdown('<div class="subheader">Welcome to the EDA Web App</div>', unsafe_allow_html=True)

@@ -38,7 +38,7 @@ def add_logo(logo_path):
     st.markdown(logo_html, unsafe_allow_html=True)
 
 # Add the logo
-add_logo("assets/AI-POWERED-EDA-TOOL.png")
+add_logo("assets/AI-EDA.png")
 
 # Define your pages
 about_page = st.Page(
